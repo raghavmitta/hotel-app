@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
+import { PromoForm } from "@/components/promo-form";
 import { ProductShowcase } from "@/components/product-showcase";
 import { LeadForm } from "@/components/lead-form";
 import { Footer } from "@/components/footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        <PromoForm />
         <ProductShowcase />
         <section id="about" className="py-24 bg-white text-center">
           <div className="max-w-4xl mx-auto px-4">
