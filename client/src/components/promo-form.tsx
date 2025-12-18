@@ -6,9 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import { useMutation } from "@tanstack/react-query";
+import { useLocation } from "wouter";
+import { apiRequest } from "@/lib/queryClient";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -20,7 +22,7 @@ const formSchema = z.object({
 });
 
 export function PromoForm() {
-  const { toast } = useToast();
+  const [, setLocation] = useLocation();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,18 +35,29 @@ export function PromoForm() {
     },
   });
 
+  const submitLead = useMutation({
+    mutationFn: async (values: z.infer<typeof formSchema>) => {
+      const response = await apiRequest("POST", "/api/leads", {
+        ...values,
+        source: "promo_form",
+      });
+      return response.json();
+    },
+    onSuccess: () => {
+      form.reset();
+      setLocation("/thank-you");
+    },
+    onError: (error) => {
+      console.error("Form submission error:", error);
+    },
+  });
+
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Request Received",
-      description: "Thank you! You'll receive exclusive early-bird pricing within 24 hours.",
-    });
-    form.reset();
+    submitLead.mutate(values);
   }
 
   return (
     <section className="py-24 bg-gradient-to-br from-accent/5 via-white to-primary/5 relative overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute top-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-primary/5 rounded-full blur-3xl" />
 
@@ -105,7 +118,7 @@ export function PromoForm() {
                       <FormItem>
                         <FormLabel className="text-xs font-semibold">Contact Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" />
+                          <Input placeholder="John Doe" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="input-promo-name" />
                         </FormControl>
                         <FormMessage className="text-xs" />
                       </FormItem>
@@ -118,7 +131,7 @@ export function PromoForm() {
                       <FormItem>
                         <FormLabel className="text-xs font-semibold">Hotel / Property</FormLabel>
                         <FormControl>
-                          <Input placeholder="Grand Plaza Hotel" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" />
+                          <Input placeholder="Grand Plaza Hotel" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="input-promo-hotel" />
                         </FormControl>
                         <FormMessage className="text-xs" />
                       </FormItem>
@@ -134,7 +147,7 @@ export function PromoForm() {
                       <FormItem>
                         <FormLabel className="text-xs font-semibold">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@hotel.com" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" />
+                          <Input placeholder="john@hotel.com" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="input-promo-email" />
                         </FormControl>
                         <FormMessage className="text-xs" />
                       </FormItem>
@@ -147,7 +160,7 @@ export function PromoForm() {
                       <FormItem>
                         <FormLabel className="text-xs font-semibold">Phone</FormLabel>
                         <FormControl>
-                          <Input placeholder="+1 (555) 000-0000" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" />
+                          <Input placeholder="+91 98765 43210" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="input-promo-phone" />
                         </FormControl>
                         <FormMessage className="text-xs" />
                       </FormItem>
@@ -163,7 +176,7 @@ export function PromoForm() {
                       <FormLabel className="text-xs font-semibold">Estimated Quantity</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm">
+                          <SelectTrigger className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="select-promo-quantity">
                             <SelectValue placeholder="Select quantity range" />
                           </SelectTrigger>
                         </FormControl>
@@ -190,6 +203,7 @@ export function PromoForm() {
                           placeholder="Project timeline, custom sizes, delivery date..." 
                           className="resize-none bg-gray-50 border-gray-200 focus:bg-white transition-colors min-h-[80px] text-sm" 
                           {...field} 
+                          data-testid="textarea-promo-message"
                         />
                       </FormControl>
                       <FormMessage className="text-xs" />
@@ -197,8 +211,14 @@ export function PromoForm() {
                   )}
                 />
 
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-base py-3">
-                  Get Early Bird Pricing
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-base py-3"
+                  disabled={submitLead.isPending}
+                  data-testid="button-promo-submit"
+                >
+                  {submitLead.isPending ? "Submitting..." : "Get Early Bird Pricing"}
                 </Button>
               </form>
             </Form>

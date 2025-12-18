@@ -6,8 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
+import { useMutation } from "@tanstack/react-query";
+import { useLocation } from "wouter";
+import { apiRequest } from "@/lib/queryClient";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -19,7 +21,7 @@ const formSchema = z.object({
 });
 
 export function LeadForm() {
-  const { toast } = useToast();
+  const [, setLocation] = useLocation();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -32,18 +34,29 @@ export function LeadForm() {
     },
   });
 
+  const submitLead = useMutation({
+    mutationFn: async (values: z.infer<typeof formSchema>) => {
+      const response = await apiRequest("POST", "/api/leads", {
+        ...values,
+        source: "contact_form",
+      });
+      return response.json();
+    },
+    onSuccess: () => {
+      form.reset();
+      setLocation("/thank-you");
+    },
+    onError: (error) => {
+      console.error("Form submission error:", error);
+    },
+  });
+
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Request Received",
-      description: "Thank you for your interest. Our sales team will contact you within 24 hours.",
-    });
-    form.reset();
+    submitLead.mutate(values);
   }
 
   return (
     <section id="contact" className="py-24 bg-primary text-white relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-1/4" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -89,7 +102,7 @@ export function LeadForm() {
                       <FormItem>
                         <FormLabel>Contact Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" />
+                          <Input placeholder="John Doe" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" data-testid="input-lead-name" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -102,7 +115,7 @@ export function LeadForm() {
                       <FormItem>
                         <FormLabel>Hotel / Property Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Grand Plaza Hotel" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" />
+                          <Input placeholder="Grand Plaza Hotel" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" data-testid="input-lead-hotel" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -118,7 +131,7 @@ export function LeadForm() {
                       <FormItem>
                         <FormLabel>Email Address</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@hotel.com" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" />
+                          <Input placeholder="john@hotel.com" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" data-testid="input-lead-email" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -131,7 +144,7 @@ export function LeadForm() {
                       <FormItem>
                         <FormLabel>Phone Number</FormLabel>
                         <FormControl>
-                          <Input placeholder="+1 (555) 000-0000" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" />
+                          <Input placeholder="+91 98765 43210" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" data-testid="input-lead-phone" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -147,7 +160,7 @@ export function LeadForm() {
                       <FormLabel>Estimated Quantity</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-gray-50 border-gray-200 focus:bg-white transition-colors">
+                          <SelectTrigger className="bg-gray-50 border-gray-200 focus:bg-white transition-colors" data-testid="select-lead-quantity">
                             <SelectValue placeholder="Select quantity range" />
                           </SelectTrigger>
                         </FormControl>
@@ -173,7 +186,8 @@ export function LeadForm() {
                         <Textarea 
                           placeholder="Specific sizes, delivery timeline, custom requirements..." 
                           className="resize-none bg-gray-50 border-gray-200 focus:bg-white transition-colors min-h-[100px]" 
-                          {...field} 
+                          {...field}
+                          data-testid="textarea-lead-message" 
                         />
                       </FormControl>
                       <FormMessage />
@@ -181,8 +195,14 @@ export function LeadForm() {
                   )}
                 />
 
-                <Button type="submit" size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold text-lg">
-                  Submit Request
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold text-lg"
+                  disabled={submitLead.isPending}
+                  data-testid="button-lead-submit"
+                >
+                  {submitLead.isPending ? "Submitting..." : "Submit Request"}
                 </Button>
               </form>
             </Form>
