@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import heroBg from "@assets/generated_images/modern_hotel_bedroom_with_cyan-navy_design.png";
+import heroBg from "@assets/generated_images/luxury_hotel_bedroom_interior.png";
 
 export function Hero() {
   return (
