@@ -33,10 +33,10 @@ export function ProductShowcase() {
             variants={slideInRight}
             className="flex-1 space-y-6"
           >
-            <span className="text-accent font-bold tracking-wider uppercase text-sm">Premium Offering</span>
-            <h2 className="text-4xl font-serif font-bold text-primary">The Royal Suite Collection</h2>
+            <span className="text-accent font-bold tracking-wider uppercase text-sm">Luxury Collection</span>
+            <h2 className="text-4xl font-serif font-bold text-primary">Premium Hybrid Mattresses</h2>
             <p className="text-lg text-muted-foreground">
-              Our flagship collection for luxury hotels. Hybrid construction with pocket springs and memory foam delivers exceptional motion isolation and pressure relief—creating the perfect sleep experience for discerning guests.
+              Crafted with perfection, these hybrid collections feature pocket springs and advanced foam technology. Engineered for exceptional support and comfort, they help improve guest posture and revitalize rest—perfect for 5-star properties.
             </p>
             
             <ul className="space-y-4 pt-4">
@@ -81,10 +81,10 @@ export function ProductShowcase() {
             variants={slideInLeft}
             className="flex-1 space-y-6"
           >
-            <span className="text-accent font-bold tracking-wider uppercase text-sm">Smart Choice Collection</span>
-            <h2 className="text-4xl font-serif font-bold text-primary">Cloud-9 Memory Foam</h2>
+            <span className="text-accent font-bold tracking-wider uppercase text-sm">Value-Driven Collection</span>
+            <h2 className="text-4xl font-serif font-bold text-primary">Memory Foam Solutions</h2>
             <p className="text-lg text-muted-foreground">
-              Pure foam comfort for boutique and modern hotels. Engineered for reliability and durability—delivering guest satisfaction at intelligent pricing that protects your ROI.
+              Designed for comfort and longevity, our memory foam range offers excellent pressure relief and support. Perfect for budget-conscious properties seeking to deliver quality sleep without compromising on guest satisfaction.
             </p>
             
             <ul className="space-y-4 pt-4">

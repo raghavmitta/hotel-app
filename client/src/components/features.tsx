@@ -5,33 +5,33 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 const features = [
   {
     icon: BedDouble,
-    title: "Premium Quality Selection",
-    description: "Carefully curated mattress collection meeting hospitality industry standards for guest comfort and durability."
+    title: "Expert Consultation",
+    description: "Our team guides you to the perfect mattress selection based on your guests' needs and hotel requirements."
   },
   {
     icon: ShieldCheck,
-    title: "Warranty Support",
-    description: "Reliable warranty coverage on all products. We stand behind the quality of every mattress in our collection."
+    title: "Lifetime Support",
+    description: "Backed by industry-leading after-sales support. We stand behind our products for the long term."
   },
   {
     icon: Truck,
-    title: "Nationwide Logistics",
-    description: "Efficient bulk delivery network ensuring your hotel opening or renovation stays on schedule."
+    title: "Nationwide Delivery",
+    description: "Reliable logistics network ensuring timely bulk delivery for your hotel openings and renovations."
   },
   {
     icon: Ruler,
-    title: "Multiple Sizes Available",
-    description: "Wide range of standard and custom dimensions to fit your property's specific needs."
+    title: "Complete Customization",
+    description: "Tailored solutions for your exact specifications—sizes, firmness, materials, and special requirements."
   },
   {
     icon: HandCoins,
-    title: "Exceptional Value",
-    description: "Premium quality at rates that work for your budget. Better margins mean better investment in guest experience."
+    title: "Smart Investment",
+    description: "Premium quality mattresses that enhance guest reviews while protecting your budget and ROI."
   },
   {
     icon: Sparkles,
-    title: "Hypoallergenic Options",
-    description: "Premium mattresses with anti-microbial and hypoallergenic treatments for guest health and satisfaction."
+    title: "Health-Focused Design",
+    description: "Mattresses engineered for orthopedic support, reducing guest complaints and improving satisfaction scores."
   }
 ];
 

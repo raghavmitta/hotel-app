@@ -64,12 +64,12 @@ export function PromoForm() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight text-primary">
-              Exclusive Bulk Pricing <br />
-              <span className="text-accent">Limited Availability</span>
+              Partner with Richa Foam <br />
+              <span className="text-accent">Special Rates Available</span>
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Get premium mattresses at exceptional rates this quarter. For bulk orders over 50 units, we're offering special pricing, fast delivery, and white-glove service. Secure your order before stock runs out.
+              Experience Richa Foam's trusted quality and expertise. For bulk hotel orders, we're offering special rates, expert consultation, and white-glove delivery. Let us help create the perfect sleep experience for your guests.
             </p>
 
             <div className="space-y-3 pt-6 border-l-4 border-accent pl-6">

@@ -19,7 +19,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-serif font-bold text-primary mb-6">About Richa Foam</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With over two decades of expertise in the hospitality industry, Richa Foam Agency curates only the finest mattress collections for discerning hotel partners. We partner directly with premier manufacturers to bring exceptional quality and unbeatable value to your property. Our deep industry relationships, rigorous quality standards, and nationwide logistics network ensure your guests sleep better—and your business thrives.
+              At Richa Foam, we're committed to offering your guests a good night's sleep, every night. With over two decades of expertise, we craft mattresses with perfection—balancing comfort and support to push the boundaries of quality. Our complete customization, expert consultation, and lifetime after-sales support make us the trusted partner for hotels serious about guest satisfaction. From orthopedic support to pain relief, we deliver sleep solutions that improve fitness, wellness, and your property's reputation.
             </p>
           </div>
         </section>

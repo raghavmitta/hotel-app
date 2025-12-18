@@ -29,11 +29,11 @@ export function Hero() {
           </span>
           
           <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight leading-tight max-w-4xl mx-auto text-white drop-shadow-lg">
-            Superior Comfort Solutions for <span className="text-accent italic">Every Guest</span>
+            A Good Night's Sleep, <span className="text-accent italic">Every Night</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
-            Premium quality mattresses curated for hospitality. Elevate guest satisfaction while optimizing your hotel's bottom line.
+            Premium mattresses crafted for hotels that put guest comfort first. From Richa Foam—trusted for quality, customization, and expert guidance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
