@@ -38,25 +38,25 @@
 
 :root {
   /* Curated Color Palette */
-  /* Primary: Navy Blue #002366 */
-  --primary: 217 100% 20%;
+  /* Primary: Navy Blue #003366 */
+  --primary: 207 100% 20%;
   --primary-foreground: 0 0% 100%;
 
   /* Secondary: Sky Blue #c8d9e6 */
   --secondary: 207 38% 84%;
-  --secondary-foreground: 217 100% 20%;
+  --secondary-foreground: 207 100% 20%;
 
   /* Background: Beige #f5efeb */
   --background: 20 50% 94%;
-  --foreground: 217 100% 20%;
+  --foreground: 207 100% 20%;
 
   /* Card: White #ffffff */
   --card: 0 0% 100%;
-  --card-foreground: 217 100% 20%;
+  --card-foreground: 207 100% 20%;
 
   /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 217 100% 20%;
+  --popover-foreground: 207 100% 20%;
 
   /* Muted: Sky Blue tinted */
   --muted: 207 25% 90%;
@@ -73,33 +73,33 @@
   /* Border: Sky Blue */
   --border: 207 35% 88%;
   --input: 207 35% 88%;
-  --ring: 217 100% 20%;
+  --ring: 207 100% 20%;
 
   --radius: 0.25rem;
 }
 
 .dark {
   /* Dark Mode: Navy with Teal */
-  --background: 217 100% 10%;
+  --background: 207 100% 10%;
   --foreground: 207 38% 88%;
 
-  --card: 217 100% 15%;
+  --card: 207 100% 15%;
   --card-foreground: 207 38% 88%;
 
-  --popover: 217 100% 15%;
+  --popover: 207 100% 15%;
   --popover-foreground: 207 38% 88%;
 
   --primary: 207 38% 78%;
-  --primary-foreground: 217 100% 10%;
+  --primary-foreground: 207 100% 10%;
 
-  --secondary: 217 100% 18%;
+  --secondary: 207 100% 18%;
   --secondary-foreground: 207 38% 88%;
 
-  --muted: 217 100% 18%;
+  --muted: 207 100% 18%;
   --muted-foreground: 207 38% 70%;
 
   --accent: 197 28% 55%;
-  --accent-foreground: 217 100% 10%;
+  --accent-foreground: 207 100% 10%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
