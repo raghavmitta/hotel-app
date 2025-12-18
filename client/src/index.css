@@ -32,38 +32,38 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --font-sans: 'Lato', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Open Sans', sans-serif;
+  --font-serif: 'Poppins', sans-serif;
 }
 
 :root {
-  /* Elegant Business Palette */
-  /* Primary: Deep Royal Blue */
-  --primary: 220 30% 20%;
+  /* Richa Foam Brand Colors */
+  /* Primary: Cyan Blue */
+  --primary: 192 76% 61%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Soft Gold/Sand */
-  --secondary: 45 40% 90%;
-  --secondary-foreground: 220 30% 20%;
+  /* Secondary: Light Cyan */
+  --secondary: 192 60% 85%;
+  --secondary-foreground: 240 100% 21%;
 
-  /* Background: Off-white / Cream */
-  --background: 40 20% 98%;
-  --foreground: 220 20% 15%;
+  /* Background: White */
+  --background: 0 0% 100%;
+  --foreground: 300 3% 18%;
 
-  /* Card: Pure White */
+  /* Card: White */
   --card: 0 0% 100%;
-  --card-foreground: 220 20% 15%;
+  --card-foreground: 300 3% 18%;
 
   /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 220 20% 15%;
+  --popover-foreground: 300 3% 18%;
 
   /* Muted */
-  --muted: 220 10% 94%;
-  --muted-foreground: 220 10% 40%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
 
-  /* Accent: Gold/Bronze for highlights */
-  --accent: 45 50% 55%;
+  /* Accent: Dark Navy Blue */
+  --accent: 240 100% 21%;
   --accent-foreground: 0 0% 100%;
 
   /* Destructive */
@@ -71,42 +71,42 @@
   --destructive-foreground: 0 0% 98%;
 
   /* Border */
-  --border: 220 10% 85%;
-  --input: 220 10% 85%;
-  --ring: 220 30% 20%;
+  --border: 0 0% 92%;
+  --input: 0 0% 92%;
+  --ring: 240 100% 21%;
 
   --radius: 0.25rem;
 }
 
 .dark {
-  /* Dark Mode: Luxury Night Mode */
-  --background: 220 30% 10%;
-  --foreground: 40 10% 90%;
+  /* Dark Mode */
+  --background: 240 30% 10%;
+  --foreground: 0 0% 95%;
 
-  --card: 220 30% 13%;
-  --card-foreground: 40 10% 90%;
+  --card: 240 30% 15%;
+  --card-foreground: 0 0% 95%;
 
-  --popover: 220 30% 13%;
-  --popover-foreground: 40 10% 90%;
+  --popover: 240 30% 15%;
+  --popover-foreground: 0 0% 95%;
 
-  --primary: 45 50% 55%; /* Gold becomes primary in dark */
-  --primary-foreground: 220 30% 10%;
+  --primary: 192 76% 61%;
+  --primary-foreground: 240 100% 21%;
 
-  --secondary: 220 30% 20%;
-  --secondary-foreground: 40 10% 90%;
+  --secondary: 240 100% 21%;
+  --secondary-foreground: 0 0% 95%;
 
-  --muted: 220 30% 20%;
-  --muted-foreground: 220 10% 60%;
+  --muted: 240 30% 25%;
+  --muted-foreground: 0 0% 70%;
 
-  --accent: 220 30% 25%;
-  --accent-foreground: 40 10% 90%;
+  --accent: 192 76% 61%;
+  --accent-foreground: 240 100% 21%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 220 30% 20%;
-  --input: 220 30% 20%;
-  --ring: 45 50% 55%;
+  --border: 240 30% 25%;
+  --input: 240 30% 25%;
+  --ring: 192 76% 61%;
 }
 
 @layer base {
