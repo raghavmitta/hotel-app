@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { useLocation } from "wouter";
-import { apiRequest } from "@/lib/queryClient";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -37,10 +36,17 @@ export function PromoForm() {
 
   const submitLead = useMutation({
     mutationFn: async (values: z.infer<typeof formSchema>) => {
-      const response = await apiRequest("POST", "/api/leads", {
-        ...values,
-        source: "promo_form",
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          source: "promo_form",
+        }),
       });
+      if (!response.ok) {
+        throw new Error("Failed to submit lead");
+      }
       return response.json();
     },
     onSuccess: () => {
