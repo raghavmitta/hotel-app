@@ -31,7 +31,10 @@ export function Navbar() {
             </Button>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <Button size="sm" className="bg-secondary text-primary hover:bg-secondary/90 font-semibold" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              Get a Quote
+            </Button>
             <button onClick={() => setIsOpen(!isOpen)} className="text-white p-2">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
