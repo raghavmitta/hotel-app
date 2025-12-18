@@ -37,76 +37,76 @@
 }
 
 :root {
-  /* Premium Navy Blue Palette */
-  /* Primary: Deep Navy Blue */
-  --primary: 224 42% 18%;
+  /* Curated Color Palette */
+  /* Primary: Navy Blue #2F4156 */
+  --primary: 214 29% 26%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Soft Slate Blue (subtle complement) */
-  --secondary: 224 25% 88%;
-  --secondary-foreground: 224 40% 15%;
+  /* Secondary: Sky Blue #c8d9e6 */
+  --secondary: 207 38% 84%;
+  --secondary-foreground: 214 29% 26%;
 
-  /* Background: Off-white with slight blue tint */
-  --background: 0 0% 99%;
-  --foreground: 224 35% 15%;
+  /* Background: Beige #f5efeb */
+  --background: 20 50% 94%;
+  --foreground: 214 29% 26%;
 
-  /* Card: Pure White */
+  /* Card: White #ffffff */
   --card: 0 0% 100%;
-  --card-foreground: 224 35% 15%;
+  --card-foreground: 214 29% 26%;
 
   /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 224 35% 15%;
+  --popover-foreground: 214 29% 26%;
 
-  /* Muted: Soft slate */
-  --muted: 224 15% 92%;
-  --muted-foreground: 224 20% 50%;
+  /* Muted: Sky Blue tinted */
+  --muted: 207 25% 90%;
+  --muted-foreground: 197 24% 50%;
 
-  /* Accent: Navy accent (darker slate) */
-  --accent: 224 35% 32%;
+  /* Accent: Teal #567C8D */
+  --accent: 197 24% 44%;
   --accent-foreground: 0 0% 100%;
 
   /* Destructive */
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  /* Border: Subtle navy-tinted border */
-  --border: 224 20% 90%;
-  --input: 224 20% 90%;
-  --ring: 224 42% 18%;
+  /* Border: Sky Blue */
+  --border: 207 35% 88%;
+  --input: 207 35% 88%;
+  --ring: 214 29% 26%;
 
   --radius: 0.25rem;
 }
 
 .dark {
-  /* Dark Mode: Navy Night Luxury */
-  --background: 224 40% 8%;
-  --foreground: 224 15% 92%;
+  /* Dark Mode: Navy with Teal */
+  --background: 214 30% 15%;
+  --foreground: 207 38% 88%;
 
-  --card: 224 38% 12%;
-  --card-foreground: 224 15% 92%;
+  --card: 214 29% 20%;
+  --card-foreground: 207 38% 88%;
 
-  --popover: 224 38% 12%;
-  --popover-foreground: 224 15% 92%;
+  --popover: 214 29% 20%;
+  --popover-foreground: 207 38% 88%;
 
-  --primary: 224 35% 70%; /* Light navy for visibility in dark */
-  --primary-foreground: 224 40% 8%;
+  --primary: 207 38% 78%;
+  --primary-foreground: 214 30% 15%;
 
-  --secondary: 224 38% 18%;
-  --secondary-foreground: 224 15% 92%;
+  --secondary: 214 29% 25%;
+  --secondary-foreground: 207 38% 88%;
 
-  --muted: 224 38% 18%;
-  --muted-foreground: 224 15% 65%;
+  --muted: 214 29% 25%;
+  --muted-foreground: 207 38% 70%;
 
-  --accent: 224 28% 58%;
-  --accent-foreground: 224 40% 8%;
+  --accent: 197 28% 55%;
+  --accent-foreground: 214 30% 15%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 224 38% 18%;
-  --input: 224 38% 18%;
-  --ring: 224 35% 70%;
+  --border: 214 29% 25%;
+  --input: 214 29% 25%;
+  --ring: 207 38% 78%;
 }
 
 @layer base {
