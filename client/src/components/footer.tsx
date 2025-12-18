@@ -1,4 +1,4 @@
-import logo from "@assets/generated_images/richa_foam_agency_professional_logo.png";
+import logo from "@assets/generated_images/richa_foam_agency_logo.png";
 
 export function Footer() {
   return (
