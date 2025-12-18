@@ -1,10 +1,17 @@
+import logo from "@assets/generated_images/richa_foam_agency_professional_logo.png";
+
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-2xl font-serif font-bold text-white">Richa Foam<span className="text-accent">.</span></h3>
+            <img 
+              src={logo} 
+              alt="Richa Foam Agency" 
+              className="h-12 w-auto"
+              data-testid="logo-footer"
+            />
             <p className="text-sm leading-relaxed text-gray-400">
               Committed to your guests' good night's sleep. Premium quality mattresses, expert guidance, and lifetime support across India since 1985.
             </p>

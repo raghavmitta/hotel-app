@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@assets/generated_images/richa_foam_agency_professional_logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +13,12 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
-              <span className="font-serif text-2xl font-bold text-primary cursor-pointer tracking-tight">
-                Richa Foam<span className="text-accent">.</span>
-              </span>
+              <img 
+                src={logo} 
+                alt="Richa Foam Agency" 
+                className="h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                data-testid="logo-navbar"
+              />
             </Link>
           </div>
           
