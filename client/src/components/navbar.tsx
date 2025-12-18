@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@assets/generated_images/richa_foam_agency_professional_logo.png";
+import logo from "@assets/generated_images/richa_foam_agency_logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
