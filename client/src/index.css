@@ -42,25 +42,25 @@
   --primary: 224 42% 18%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Slate Blue (subtle complement) */
-  --secondary: 224 20% 92%;
-  --secondary-foreground: 224 42% 18%;
+  /* Secondary: Soft Slate Blue (subtle complement) */
+  --secondary: 224 25% 88%;
+  --secondary-foreground: 224 40% 15%;
 
   /* Background: Off-white with slight blue tint */
-  --background: 224 15% 97%;
-  --foreground: 224 30% 12%;
+  --background: 0 0% 99%;
+  --foreground: 224 35% 15%;
 
   /* Card: Pure White */
   --card: 0 0% 100%;
-  --card-foreground: 224 30% 12%;
+  --card-foreground: 224 35% 15%;
 
   /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 224 30% 12%;
+  --popover-foreground: 224 35% 15%;
 
   /* Muted: Soft slate */
-  --muted: 224 18% 91%;
-  --muted-foreground: 224 20% 45%;
+  --muted: 224 15% 92%;
+  --muted-foreground: 224 20% 50%;
 
   /* Accent: Navy accent (darker slate) */
   --accent: 224 35% 32%;
@@ -71,8 +71,8 @@
   --destructive-foreground: 0 0% 98%;
 
   /* Border: Subtle navy-tinted border */
-  --border: 224 15% 88%;
-  --input: 224 15% 88%;
+  --border: 224 20% 90%;
+  --input: 224 20% 90%;
   --ring: 224 42% 18%;
 
   --radius: 0.25rem;
