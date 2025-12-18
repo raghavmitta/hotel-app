@@ -33,7 +33,7 @@ export function Hero() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
-            Stop juggling factories and suppliers. Get one trusted partner who handles the complexity—so you focus on hospitality. Premium quality. Lifetime support. Smart pricing.
+            One brand. Complete expertise. Zero complexity. We partner exclusively with a single premium manufacturer—meaning superior quality, consistent support, and peace of mind for your guests.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">

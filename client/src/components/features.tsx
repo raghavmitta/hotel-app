@@ -30,8 +30,8 @@ const features = [
   },
   {
     icon: Sparkles,
-    title: "Hospitality Expertise Included",
-    description: "20+ years in the hospitality space. We know what keeps guests satisfied, what reduces complaints, and what protects your reputation. Factory owners don't have this insight."
+    title: "Single Brand Excellence",
+    description: "We're exclusive partners with one premium manufacturer. This means deep product knowledge, better quality control, and unified warranty support. No brand switching. No conflicting recommendations."
   }
 ];
 
