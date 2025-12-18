@@ -25,8 +25,8 @@ const features = [
   },
   {
     icon: HandCoins,
-    title: "Wholesale Pricing",
-    description: "Direct wholesale rates on bulk orders. Maximize your margin while delivering quality to guests."
+    title: "Exceptional Value",
+    description: "Premium quality at rates that work for your budget. Better margins mean better investment in guest experience."
   },
   {
     icon: Sparkles,

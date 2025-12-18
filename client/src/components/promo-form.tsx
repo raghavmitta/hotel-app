@@ -64,23 +64,23 @@ export function PromoForm() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight text-primary">
-              Wholesale Rates Available <br />
-              <span className="text-accent">Limited Stock</span>
+              Exclusive Bulk Pricing <br />
+              <span className="text-accent">Limited Availability</span>
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Access premium mattresses at unbeatable wholesale prices. For bulk orders this quarter, we're offering exclusive rates and expedited delivery. Stock is limited—reserve your batch now.
+              Get premium mattresses at exceptional rates this quarter. For bulk orders over 50 units, we're offering special pricing, fast delivery, and white-glove service. Secure your order before stock runs out.
             </p>
 
             <div className="space-y-3 pt-6 border-l-4 border-accent pl-6">
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Wholesale pricing on bulk orders 50+ units
+                ✓ Exceptional pricing on orders 50+ units
               </p>
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Fast nationwide delivery & logistics support
+                ✓ Fast nationwide delivery with white-glove service
               </p>
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Dedicated account management
+                ✓ Dedicated support & customized solutions
               </p>
             </div>
           </motion.div>
