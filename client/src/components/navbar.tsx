@@ -8,7 +8,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-primary backdrop-blur-md border-b border-primary/20">
+    <nav className="fixed w-full z-50 backdrop-blur-md border-b border-white/10" style={{ backgroundColor: '#000080' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
@@ -41,7 +41,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-primary border-t border-primary/20 absolute w-full">
+        <div className="md:hidden border-t border-white/10 absolute w-full" style={{ backgroundColor: '#000080' }}>
           <div className="px-4 pt-2 pb-6 space-y-2 shadow-lg">
             <a href="#features" className="block px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 rounded-md" onClick={() => setIsOpen(false)}>Why Us</a>
             <a href="#products" className="block px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 rounded-md" onClick={() => setIsOpen(false)}>Products</a>
