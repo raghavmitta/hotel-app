@@ -33,7 +33,7 @@ export function Hero() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
-            Premium mattresses crafted for hotels that put guest comfort first. From Richa Foam—trusted for quality, customization, and expert guidance.
+            Stop juggling factories and suppliers. Get one trusted partner who handles the complexity—so you focus on hospitality. Premium quality. Lifetime support. Smart pricing.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">

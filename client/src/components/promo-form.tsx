@@ -64,23 +64,23 @@ export function PromoForm() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight text-primary">
-              Partner with Richa Foam <br />
-              <span className="text-accent">Special Rates Available</span>
+              Skip Factory Headaches <br />
+              <span className="text-accent">Partner with Experts</span>
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Experience Richa Foam's trusted quality and expertise. For bulk hotel orders, we're offering special rates, expert consultation, and white-glove delivery. Let us help create the perfect sleep experience for your guests.
+              Don't waste time negotiating with 10 different factory owners. Let us handle the sourcing, quality checks, and logistics. Focus on running your hotel—we'll handle your guests' sleep.
             </p>
 
             <div className="space-y-3 pt-6 border-l-4 border-accent pl-6">
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Exceptional pricing on orders 50+ units
+                ✓ Better pricing than retail, better service than factory direct
               </p>
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Fast nationwide delivery with white-glove service
+                ✓ No MOQs, no negotiations—just expert guidance & fast delivery
               </p>
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Dedicated support & customized solutions
+                ✓ Lifetime support + warranty handling we do, not you
               </p>
             </div>
           </motion.div>

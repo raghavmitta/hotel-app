@@ -19,7 +19,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-serif font-bold text-primary mb-6">About Richa Foam</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Richa Foam, we're committed to offering your guests a good night's sleep, every night. With over two decades of expertise, we craft mattresses with perfection—balancing comfort and support to push the boundaries of quality. Our complete customization, expert consultation, and lifetime after-sales support make us the trusted partner for hotels serious about guest satisfaction. From orthopedic support to pain relief, we deliver sleep solutions that improve fitness, wellness, and your property's reputation.
+              At Richa Foam, we're committed to offering your guests a good night's sleep, every night. Over 20 years, we've learned what works in hospitality. We don't just sell mattresses—we partner with hotels to remove the complexity of sourcing quality sleep solutions. While factory owners want minimum orders and offer zero support, and big brands prioritize margin over your needs, we do the research, handle quality assurance, manage logistics, and provide lifetime support. One partner. One phone call. Better margins. Zero factory headaches.
             </p>
           </div>
         </section>

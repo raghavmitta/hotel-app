@@ -5,33 +5,33 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 const features = [
   {
     icon: BedDouble,
-    title: "Expert Consultation",
-    description: "Our team guides you to the perfect mattress selection based on your guests' needs and hotel requirements."
+    title: "Curated Selection, Not Factory Direct",
+    description: "We've vetted and tested dozens of options. You get only the best—no factory politics, no quality inconsistencies, no language barriers. We handle the complexity."
   },
   {
     icon: ShieldCheck,
-    title: "Lifetime Support",
-    description: "Backed by industry-leading after-sales support. We stand behind our products for the long term."
+    title: "Lifetime Partnership, Not Just a Sale",
+    description: "Unlike direct factory deals, we're here long-term. Lifetime after-sales support, warranty claims handling, and expert guidance whenever you need it."
   },
   {
     icon: Truck,
-    title: "Nationwide Delivery",
-    description: "Reliable logistics network ensuring timely bulk delivery for your hotel openings and renovations."
+    title: "One Point of Contact",
+    description: "No juggling multiple suppliers or factory negotiations. Single dedicated account manager. One phone call for logistics, support, and special requests."
   },
   {
     icon: Ruler,
-    title: "Complete Customization",
-    description: "Tailored solutions for your exact specifications—sizes, firmness, materials, and special requirements."
+    title: "Complete Customization Without Factory Hassle",
+    description: "Want specific sizes, firmness, or materials? We customize without the communication delays or MOQ frustrations of dealing direct with manufacturers."
   },
   {
     icon: HandCoins,
-    title: "Smart Investment",
-    description: "Premium quality mattresses that enhance guest reviews while protecting your budget and ROI."
+    title: "Better Margins Than Retail, Better Service Than Factory",
+    description: "Competitive pricing without sacrificing support. You get the value proposition other brands can't deliver—affordable quality with accountability."
   },
   {
     icon: Sparkles,
-    title: "Health-Focused Design",
-    description: "Mattresses engineered for orthopedic support, reducing guest complaints and improving satisfaction scores."
+    title: "Hospitality Expertise Included",
+    description: "20+ years in the hospitality space. We know what keeps guests satisfied, what reduces complaints, and what protects your reputation. Factory owners don't have this insight."
   }
 ];
 
@@ -40,9 +40,9 @@ export function Features() {
     <section id="features" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Why Top Hotels Choose Us</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Why Hotels Choose Richa Foam</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We understand the hospitality industry. Our products are engineered to maximize guest satisfaction while minimizing operational costs.
+            Skip the factory complexity. Get a trusted partner who handles the research, quality assurance, and support—so you focus on your guests.
           </p>
         </div>
 
