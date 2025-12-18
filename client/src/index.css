@@ -37,33 +37,33 @@
 }
 
 :root {
-  /* Richa Foam Brand Colors */
-  /* Primary: Cyan Blue */
-  --primary: 192 76% 61%;
+  /* Richa Foam Brand Colors - Subtle Edition */
+  /* Primary: Soft Muted Cyan */
+  --primary: 192 45% 62%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Light Cyan */
-  --secondary: 192 60% 85%;
-  --secondary-foreground: 240 100% 21%;
+  /* Secondary: Very Soft Cyan */
+  --secondary: 192 35% 88%;
+  --secondary-foreground: 240 60% 28%;
 
   /* Background: White */
   --background: 0 0% 100%;
-  --foreground: 300 3% 18%;
+  --foreground: 220 8% 22%;
 
   /* Card: White */
   --card: 0 0% 100%;
-  --card-foreground: 300 3% 18%;
+  --card-foreground: 220 8% 22%;
 
   /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 300 3% 18%;
+  --popover-foreground: 220 8% 22%;
 
   /* Muted */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
+  --muted: 0 0% 95%;
+  --muted-foreground: 220 5% 48%;
 
-  /* Accent: Dark Navy Blue */
-  --accent: 240 100% 21%;
+  /* Accent: Soft Navy Blue */
+  --accent: 240 60% 28%;
   --accent-foreground: 0 0% 100%;
 
   /* Destructive */
@@ -71,42 +71,42 @@
   --destructive-foreground: 0 0% 98%;
 
   /* Border */
-  --border: 0 0% 92%;
-  --input: 0 0% 92%;
-  --ring: 240 100% 21%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 240 60% 28%;
 
   --radius: 0.25rem;
 }
 
 .dark {
-  /* Dark Mode */
-  --background: 240 30% 10%;
-  --foreground: 0 0% 95%;
+  /* Dark Mode - Subtle */
+  --background: 240 25% 12%;
+  --foreground: 0 0% 92%;
 
-  --card: 240 30% 15%;
-  --card-foreground: 0 0% 95%;
+  --card: 240 25% 18%;
+  --card-foreground: 0 0% 92%;
 
-  --popover: 240 30% 15%;
-  --popover-foreground: 0 0% 95%;
+  --popover: 240 25% 18%;
+  --popover-foreground: 0 0% 92%;
 
-  --primary: 192 76% 61%;
-  --primary-foreground: 240 100% 21%;
+  --primary: 192 45% 62%;
+  --primary-foreground: 240 60% 28%;
 
-  --secondary: 240 100% 21%;
-  --secondary-foreground: 0 0% 95%;
+  --secondary: 240 60% 28%;
+  --secondary-foreground: 0 0% 92%;
 
-  --muted: 240 30% 25%;
-  --muted-foreground: 0 0% 70%;
+  --muted: 240 25% 28%;
+  --muted-foreground: 0 0% 68%;
 
-  --accent: 192 76% 61%;
-  --accent-foreground: 240 100% 21%;
+  --accent: 192 45% 62%;
+  --accent-foreground: 240 60% 28%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 240 30% 25%;
-  --input: 240 30% 25%;
-  --ring: 192 76% 61%;
+  --border: 240 25% 28%;
+  --input: 240 25% 28%;
+  --ring: 192 45% 62%;
 }
 
 @layer base {
