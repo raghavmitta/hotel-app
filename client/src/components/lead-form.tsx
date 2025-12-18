@@ -60,12 +60,12 @@ export function LeadForm() {
             
             <div className="space-y-4 pt-4 border-t border-white/10">
               <div className="flex flex-col">
-                <span className="text-sm text-accent uppercase tracking-wider font-bold mb-1">Direct Sales Line</span>
-                <span className="text-2xl font-serif">+91 98765 43210</span>
+                <span className="text-sm text-white/80 uppercase tracking-wider font-bold mb-1">Direct Sales Line</span>
+                <span className="text-2xl font-serif text-white">+91 98765 43210</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm text-accent uppercase tracking-wider font-bold mb-1">Email Support</span>
-                <span className="text-2xl font-serif">sales@richafoam.com</span>
+                <span className="text-sm text-white/80 uppercase tracking-wider font-bold mb-1">Email Support</span>
+                <span className="text-2xl font-serif text-white">sales@richafoam.com</span>
               </div>
             </div>
           </div>
