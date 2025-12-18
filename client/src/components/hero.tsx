@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
-import heroBg from "@assets/generated_images/luxury_hotel_bedroom_interior.png";
+import heroBg from "@assets/generated_images/navy_luxury_hotel_bedroom_hero.png";
 
 export function Hero() {
   return (
     <div className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Image with Navy Overlay */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
           alt="Luxury Hotel Bedroom" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-blue-900/40 to-blue-900/20" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
