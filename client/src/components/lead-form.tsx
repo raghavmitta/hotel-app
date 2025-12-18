@@ -52,7 +52,7 @@ export function LeadForm() {
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
               Ready to Upgrade Your <br />
-              <span className="text-accent">Guest Experience?</span>
+              <span className="text-white">Guest Experience?</span>
             </h2>
             <p className="text-lg text-gray-300 max-w-lg">
               Get a custom quote for your property today. We offer competitive bulk pricing and dedicated account management for hotel partners.
