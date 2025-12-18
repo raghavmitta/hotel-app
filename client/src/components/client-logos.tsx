@@ -17,9 +17,9 @@ export function ClientLogos() {
     <section className="py-20 bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Trusted by Leading Hotels</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Trusted by India's Leading Hotels</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Premium hotels across India trust Richa Foam for guest comfort and operational reliability.
+            Premium 5-star and boutique hotels across India trust Richa Foam for guest comfort and operational reliability.
           </p>
         </div>
 

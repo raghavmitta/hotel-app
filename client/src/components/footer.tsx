@@ -6,7 +6,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl font-serif font-bold text-white">Richa Foam<span className="text-accent">.</span></h3>
             <p className="text-sm leading-relaxed text-gray-400">
-              Committed to your guests' good night's sleep. Premium quality mattresses, expert guidance, and lifetime support since 1995.
+              Committed to your guests' good night's sleep. Premium quality mattresses, expert guidance, and lifetime support across India since 1985.
             </p>
           </div>
           
