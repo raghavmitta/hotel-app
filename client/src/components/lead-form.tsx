@@ -181,7 +181,7 @@ export function LeadForm() {
                   )}
                 />
 
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-primary font-bold text-lg">
+                <Button type="submit" size="lg" className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold text-lg">
                   Submit Request
                 </Button>
               </form>

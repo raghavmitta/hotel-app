@@ -26,7 +26,7 @@ export function Navbar() {
             <a href="#features" className="text-white/80 hover:text-white transition-colors font-medium">Why Us</a>
             <a href="#products" className="text-white/80 hover:text-white transition-colors font-medium">Products</a>
             <a href="#about" className="text-white/80 hover:text-white transition-colors font-medium">About</a>
-            <Button size="lg" className="bg-accent text-white hover:bg-accent/90 font-semibold px-6" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" className="bg-secondary text-primary hover:bg-secondary/90 font-semibold px-6" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Get a Quote
             </Button>
           </div>
@@ -47,7 +47,7 @@ export function Navbar() {
             <a href="#products" className="block px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 rounded-md" onClick={() => setIsOpen(false)}>Products</a>
             <a href="#about" className="block px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 rounded-md" onClick={() => setIsOpen(false)}>About</a>
             <div className="pt-4">
-              <Button className="w-full bg-accent text-white" size="lg" onClick={() => { setIsOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <Button className="w-full bg-secondary text-primary" size="lg" onClick={() => { setIsOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 Get a Quote
               </Button>
             </div>
