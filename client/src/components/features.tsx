@@ -5,33 +5,33 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 const features = [
   {
     icon: BedDouble,
-    title: "Curated Selection, Not Factory Direct",
-    description: "We've vetted and tested dozens of options. You get only the best—no factory politics, no quality inconsistencies, no language barriers. We handle the complexity."
+    title: "Expert Distributor, Not Retail Middleman",
+    description: "We partner exclusively with one premium manufacturer. Deep product expertise, quality assured, and industry-tested. You get the best without the factory complexity."
   },
   {
     icon: ShieldCheck,
-    title: "Lifetime Partnership, Not Just a Sale",
-    description: "Unlike direct factory deals, we're here long-term. Lifetime after-sales support, warranty claims handling, and expert guidance whenever you need it."
+    title: "Lifetime Partnership, Not Transactional",
+    description: "Unlike factory direct, we handle warranty claims, provide ongoing support, and are here for the long term. Your success is our business."
   },
   {
     icon: Truck,
-    title: "One Point of Contact",
-    description: "No juggling multiple suppliers or factory negotiations. Single dedicated account manager. One phone call for logistics, support, and special requests."
+    title: "Hassle-Free Logistics",
+    description: "No factory MOQs or minimum order frustrations. Flexible ordering, fast delivery, and dedicated account management—one phone call for everything."
   },
   {
     icon: Ruler,
-    title: "Complete Customization Without Factory Hassle",
-    description: "Want specific sizes, firmness, or materials? We customize without the communication delays or MOQ frustrations of dealing direct with manufacturers."
+    title: "Complete Customization Support",
+    description: "Special sizes, firmness preferences, material requests? We facilitate everything without the communication delays or complications of dealing direct."
   },
   {
     icon: HandCoins,
-    title: "Better Margins Than Retail, Better Service Than Factory",
-    description: "Competitive pricing without sacrificing support. You get the value proposition other brands can't deliver—affordable quality with accountability."
+    title: "Smart Pricing + White-Glove Service",
+    description: "Better rates than retail, better support than factory. You get institutional pricing with the expertise and accountability of a trusted partner."
   },
   {
     icon: Sparkles,
-    title: "Single Brand Excellence",
-    description: "We're exclusive partners with one premium manufacturer. This means deep product knowledge, better quality control, and unified warranty support. No brand switching. No conflicting recommendations."
+    title: "Single Brand Deep Expertise",
+    description: "Exclusive partnership means we know this brand inside and out. Superior quality control, consistent support, and zero brand confusion."
   }
 ];
 

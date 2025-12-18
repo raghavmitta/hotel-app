@@ -64,23 +64,23 @@ export function PromoForm() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight text-primary">
-              Skip Factory Headaches <br />
-              <span className="text-accent">Partner with Experts</span>
+              Why Deal Direct with Factories? <br />
+              <span className="text-accent">Get a Trusted Partner Instead</span>
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Don't waste time negotiating with 10 different factory owners. Let us handle the sourcing, quality checks, and logistics. Focus on running your hotel—we'll handle your guests' sleep.
+              Factory direct means MOQs, communication delays, and zero support. Richa Foam is your expert distributor—we handle logistics, quality assurance, and lifetime support. One trusted source. Complete peace of mind.
             </p>
 
             <div className="space-y-3 pt-6 border-l-4 border-accent pl-6">
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Better pricing than retail, better service than factory direct
+                ✓ Exceptional pricing + expert guidance (no factory negotiations)
               </p>
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ No MOQs, no negotiations—just expert guidance & fast delivery
+                ✓ Flexible orders, fast delivery, zero hassle
               </p>
               <p className="text-sm text-foreground/80 font-semibold">
-                ✓ Lifetime support + warranty handling we do, not you
+                ✓ Lifetime support + warranty claims we handle for you
               </p>
             </div>
           </motion.div>
