@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { slideInLeft, slideInRight } from "@/lib/animations";
-import mattressImg from "@assets/generated_images/premium_mattress_fabric_closeup.png";
-import foamImg from "@assets/generated_images/comfortable_memory_foam_texture.png";
+import mattressImg from "@assets/generated_images/premium_mattress_with_brand_colors.png";
+import foamImg from "@assets/generated_images/memory_foam_with_brand_gradient.png";
 import { Check } from "lucide-react";
 
 export function ProductShowcase() {
