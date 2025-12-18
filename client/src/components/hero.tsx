@@ -6,33 +6,32 @@ import heroBg from "@assets/generated_images/luxury_hotel_bedroom_interior.png";
 export function Hero() {
   return (
     <div className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Navy Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
           alt="Luxury Hotel Bedroom" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-blue-900/40 to-blue-900/20" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div 
           initial="initial"
           animate="animate"
           variants={fadeIn}
           className="space-y-8"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-accent/20 border border-accent/40 text-accent-foreground backdrop-blur-sm text-sm font-semibold tracking-wider uppercase mb-4">
+          <span className="inline-block py-1 px-3 rounded-full bg-white/15 border border-white/30 text-white backdrop-blur-sm text-sm font-semibold tracking-wider uppercase mb-4">
             Premium Hotel Solutions
           </span>
           
-          <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight leading-tight max-w-4xl mx-auto text-white drop-shadow-lg">
-            A Good Night's Sleep, <span className="text-accent italic">Every Night</span>
+          <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight leading-tight max-w-4xl mx-auto text-white drop-shadow-2xl" style={{textShadow: '0 4px 20px rgba(0,0,0,0.8)'}}>
+            A Good Night's Sleep, <span className="italic">Every Night</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
+          <p className="text-xl md:text-2xl text-white max-w-2xl mx-auto font-light leading-relaxed drop-shadow-2xl" style={{textShadow: '0 2px 10px rgba(0,0,0,0.7)'}}>
             One brand. Complete expertise. Zero complexity. We partner exclusively with a single premium manufacturer—meaning superior quality, consistent support, and peace of mind for your guests.
           </p>
 
