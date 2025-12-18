@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="space-y-4">
             <img 
               src={logo} 
@@ -13,8 +13,18 @@ export function Footer() {
               data-testid="logo-footer"
             />
             <p className="text-sm leading-relaxed text-gray-400">
-              Premium quality mattresses, expert guidance, and lifetime support for hotels across India.
+              Premium quality mattresses, expert guidance, and lifetime support for hotels across India since 1985.
             </p>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-white mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
+              <li><a href="#products" className="text-gray-400 hover:text-white transition-colors">Our Collections</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Get a Quote</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
           </div>
 
           <div>
