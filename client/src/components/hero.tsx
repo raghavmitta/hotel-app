@@ -38,7 +38,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
               size="xl" 
-              className="bg-accent text-primary hover:bg-accent/90 text-lg px-8 py-6 h-auto font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
+              className="bg-secondary text-primary hover:bg-secondary/90 text-lg px-8 py-6 h-auto font-bold shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Request Bulk Pricing
