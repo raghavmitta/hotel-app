@@ -81,18 +81,18 @@ export function ProductShowcase() {
             variants={slideInLeft}
             className="flex-1 space-y-6"
           >
-            <span className="text-accent font-bold tracking-wider uppercase text-sm">Value-Driven Collection</span>
-            <h2 className="text-4xl font-serif font-bold text-primary">Memory Foam Solutions</h2>
+            <span className="text-accent font-bold tracking-wider uppercase text-sm">Reliable Collection</span>
+            <h2 className="text-4xl font-serif font-bold text-primary">Orthopedic Spring Mattresses</h2>
             <p className="text-lg text-muted-foreground">
-              Designed for comfort and longevity, our memory foam range offers excellent pressure relief and support. Perfect for budget-conscious properties seeking to deliver quality sleep without compromising on guest satisfaction.
+              Built for durability and support, our spring-based collection delivers excellent spinal alignment and longevity. Perfect for properties seeking proven reliability and superior guest comfort at smart pricing.
             </p>
             
             <ul className="space-y-4 pt-4">
               {[
-                "High-density base core",
-                "Gel-infused comfort layer",
-                "Removable & washable cover",
-                "Fire-retardant compliant"
+                "Pocket spring support system",
+                "Orthopedic design for spinal support",
+                "High-density foam layers",
+                "Breathable, long-lasting cover"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
