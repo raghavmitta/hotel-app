@@ -49,11 +49,6 @@ export function Navbar() {
             <a href="#features" className="block px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 rounded-md" onClick={() => setIsOpen(false)}>Why Us</a>
             <a href="#products" className="block px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 rounded-md" onClick={() => setIsOpen(false)}>Products</a>
             <a href="#about" className="block px-3 py-3 text-base font-medium text-white/80 hover:bg-white/10 rounded-md" onClick={() => setIsOpen(false)}>About</a>
-            <div className="pt-4">
-              <Button className="w-full bg-secondary text-primary" size="lg" onClick={() => { setIsOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                Get a Quote
-              </Button>
-            </div>
           </div>
         </div>
       )}
