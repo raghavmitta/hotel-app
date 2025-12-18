@@ -33,10 +33,10 @@ export function ProductShowcase() {
             variants={slideInRight}
             className="flex-1 space-y-6"
           >
-            <span className="text-accent font-bold tracking-wider uppercase text-sm">The Flagship Model</span>
+            <span className="text-accent font-bold tracking-wider uppercase text-sm">Premium Collection</span>
             <h2 className="text-4xl font-serif font-bold text-primary">The Royal Suite Collection</h2>
             <p className="text-lg text-muted-foreground">
-              Our signature mattress designed for 5-star establishments. Featuring a hybrid construction of pocket springs and high-density memory foam for motion isolation and deep pressure relief.
+              Our top-tier wholesale offering for 5-star establishments. Hybrid construction with pocket springs and memory foam providing excellent motion isolation and pressure relief—perfect for luxury hotel environments.
             </p>
             
             <ul className="space-y-4 pt-4">
@@ -81,10 +81,10 @@ export function ProductShowcase() {
             variants={slideInLeft}
             className="flex-1 space-y-6"
           >
-            <span className="text-accent font-bold tracking-wider uppercase text-sm">Material Innovation</span>
+            <span className="text-accent font-bold tracking-wider uppercase text-sm">Value Collection</span>
             <h2 className="text-4xl font-serif font-bold text-primary">Cloud-9 Memory Foam</h2>
             <p className="text-lg text-muted-foreground">
-              Pure foam solutions for boutique hotels and modern stays. Engineered for longevity and consistent comfort that doesn't sag over time.
+              Pure foam solutions for boutique hotels and modern stays. Reliable comfort and durability at wholesale prices—ideal for value-conscious properties.
             </p>
             
             <ul className="space-y-4 pt-4">

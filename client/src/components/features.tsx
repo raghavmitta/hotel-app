@@ -5,13 +5,13 @@ import { fadeIn, staggerContainer } from "@/lib/animations";
 const features = [
   {
     icon: BedDouble,
-    title: "Orthopedic Support",
-    description: "Advanced foam layers designed to support spinal alignment for superior guest comfort."
+    title: "Premium Quality Selection",
+    description: "Carefully curated mattress collection meeting hospitality industry standards for guest comfort and durability."
   },
   {
     icon: ShieldCheck,
-    title: "10-Year Warranty",
-    description: "Industry-leading durability guarantee. Our mattresses are built to withstand high-turnover use."
+    title: "Warranty Support",
+    description: "Reliable warranty coverage on all products. We stand behind the quality of every mattress in our collection."
   },
   {
     icon: Truck,
@@ -20,18 +20,18 @@ const features = [
   },
   {
     icon: Ruler,
-    title: "Custom Dimensions",
-    description: "We manufacture to your exact specifications. Any size, any shape, any firmness."
+    title: "Multiple Sizes Available",
+    description: "Wide range of standard and custom dimensions to fit your property's specific needs."
   },
   {
     icon: HandCoins,
-    title: "Direct Factory Pricing",
-    description: "Cut out the middleman. Get premium quality at wholesale manufacturing rates."
+    title: "Wholesale Pricing",
+    description: "Direct wholesale rates on bulk orders. Maximize your margin while delivering quality to guests."
   },
   {
     icon: Sparkles,
-    title: "Anti-Microbial Fabric",
-    description: "Hypoallergenic and treated covers to maintain the highest hygiene standards."
+    title: "Hypoallergenic Options",
+    description: "Premium mattresses with anti-microbial and hypoallergenic treatments for guest health and satisfaction."
   }
 ];
 

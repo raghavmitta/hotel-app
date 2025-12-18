@@ -19,7 +19,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-serif font-bold text-primary mb-6">About Richa Foam</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With over two decades of expertise in foam technology and mattress manufacturing, Richa Foam Agency stands as a beacon of quality in the hospitality supply chain. We don't just sell mattresses; we engineer sleep experiences that keep your guests coming back. Our state-of-the-art facility ensures consistent quality across large-scale orders, making us the trusted partner for hotel chains across the country.
+              With over two decades of expertise in mattress sourcing and hospitality supply, Richa Foam Agency stands as a trusted wholesale partner in the hospitality industry. We curate the finest mattress collections from leading manufacturers and deliver them directly to hotel chains at wholesale rates. Our deep industry relationships, quality assurance standards, and efficient logistics network make us the go-to partner for hotel chains seeking premium bulk solutions across the country.
             </p>
           </div>
         </section>

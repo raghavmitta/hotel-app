@@ -29,11 +29,11 @@ export function Hero() {
           </span>
           
           <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight leading-tight max-w-4xl mx-auto text-white drop-shadow-lg">
-            Elevate Your Guest Experience with <span className="text-accent italic">Richa Foam</span>
+            Premium Mattress Wholesale Solutions for <span className="text-accent italic">Your Hotel</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
-            Engineered for durability, designed for luxury. The preferred mattress partner for premium hotels worldwide.
+            Curated for luxury, priced for profit. The preferred wholesale partner for premium hotels seeking quality bulk solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
