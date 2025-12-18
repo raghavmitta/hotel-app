@@ -37,76 +37,76 @@
 }
 
 :root {
-  /* Elegant Business Palette */
-  /* Primary: Deep Royal Blue */
-  --primary: 220 30% 20%;
+  /* Premium Navy Blue Palette */
+  /* Primary: Deep Navy Blue */
+  --primary: 224 42% 18%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Soft Gold/Sand */
-  --secondary: 45 40% 90%;
-  --secondary-foreground: 220 30% 20%;
+  /* Secondary: Slate Blue (subtle complement) */
+  --secondary: 224 20% 92%;
+  --secondary-foreground: 224 42% 18%;
 
-  /* Background: Off-white / Cream */
-  --background: 40 20% 98%;
-  --foreground: 220 20% 15%;
+  /* Background: Off-white with slight blue tint */
+  --background: 224 15% 97%;
+  --foreground: 224 30% 12%;
 
   /* Card: Pure White */
   --card: 0 0% 100%;
-  --card-foreground: 220 20% 15%;
+  --card-foreground: 224 30% 12%;
 
   /* Popover */
   --popover: 0 0% 100%;
-  --popover-foreground: 220 20% 15%;
+  --popover-foreground: 224 30% 12%;
 
-  /* Muted */
-  --muted: 220 10% 94%;
-  --muted-foreground: 220 10% 40%;
+  /* Muted: Soft slate */
+  --muted: 224 18% 91%;
+  --muted-foreground: 224 20% 45%;
 
-  /* Accent: Gold/Bronze for highlights */
-  --accent: 45 50% 55%;
+  /* Accent: Navy accent (darker slate) */
+  --accent: 224 35% 32%;
   --accent-foreground: 0 0% 100%;
 
   /* Destructive */
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  /* Border */
-  --border: 220 10% 85%;
-  --input: 220 10% 85%;
-  --ring: 220 30% 20%;
+  /* Border: Subtle navy-tinted border */
+  --border: 224 15% 88%;
+  --input: 224 15% 88%;
+  --ring: 224 42% 18%;
 
   --radius: 0.25rem;
 }
 
 .dark {
-  /* Dark Mode: Luxury Night Mode */
-  --background: 220 30% 10%;
-  --foreground: 40 10% 90%;
+  /* Dark Mode: Navy Night Luxury */
+  --background: 224 40% 8%;
+  --foreground: 224 15% 92%;
 
-  --card: 220 30% 13%;
-  --card-foreground: 40 10% 90%;
+  --card: 224 38% 12%;
+  --card-foreground: 224 15% 92%;
 
-  --popover: 220 30% 13%;
-  --popover-foreground: 40 10% 90%;
+  --popover: 224 38% 12%;
+  --popover-foreground: 224 15% 92%;
 
-  --primary: 45 50% 55%; /* Gold becomes primary in dark */
-  --primary-foreground: 220 30% 10%;
+  --primary: 224 35% 70%; /* Light navy for visibility in dark */
+  --primary-foreground: 224 40% 8%;
 
-  --secondary: 220 30% 20%;
-  --secondary-foreground: 40 10% 90%;
+  --secondary: 224 38% 18%;
+  --secondary-foreground: 224 15% 92%;
 
-  --muted: 220 30% 20%;
-  --muted-foreground: 220 10% 60%;
+  --muted: 224 38% 18%;
+  --muted-foreground: 224 15% 65%;
 
-  --accent: 220 30% 25%;
-  --accent-foreground: 40 10% 90%;
+  --accent: 224 28% 58%;
+  --accent-foreground: 224 40% 8%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 220 30% 20%;
-  --input: 220 30% 20%;
-  --ring: 45 50% 55%;
+  --border: 224 38% 18%;
+  --input: 224 38% 18%;
+  --ring: 224 35% 70%;
 }
 
 @layer base {
