@@ -11,7 +11,7 @@ import NotFound from "@/pages/not-found";
 
 function App() {
   return (
-    <WouterRouter base="/demo-app">
+    <WouterRouter base="/hospitality-mattresses">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />

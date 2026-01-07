@@ -15,7 +15,7 @@ const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   hotelName: z.string().min(2, "Hotel name is required"),
   email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number is required"),
+  phone: z.string().min(14, "Please enter a valid 10-digit phone number after +91").max(14, "Invalid phone number").startsWith("+91", "Phone number must start with '+91 '"),
   quantity: z.string().min(1, "Please select a quantity"),
   message: z.string().optional(),
 });
@@ -28,7 +28,7 @@ export function PromoForm() {
       name: "",
       hotelName: "",
       email: "",
-      phone: "",
+      phone: "+91",
       quantity: "",
       message: "",
     },
