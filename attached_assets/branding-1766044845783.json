@@ -1,0 +1,110 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Open Sans",
+      "count": 72
+    },
+    {
+      "family": "sans-serif",
+      "count": 19
+    },
+    {
+      "family": "HelveticaNeue-Light",
+      "count": 14
+    },
+    {
+      "family": "Helvetica Neue Light",
+      "count": 14
+    },
+    {
+      "family": "Helvetica Neue",
+      "count": 14
+    },
+    {
+      "family": "Helvetica",
+      "count": 14
+    },
+    {
+      "family": "Arial",
+      "count": 14
+    },
+    {
+      "family": "Lucida Grande",
+      "count": 14
+    },
+    {
+      "family": "Poppins",
+      "count": 5
+    },
+    {
+      "family": "Yanone Kaffeesatz",
+      "count": 5
+    }
+  ],
+  "colors": {
+    "primary": "#42BCE2",
+    "accent": "#00016B",
+    "background": "#FFFFFF",
+    "textPrimary": "#2D2B2D",
+    "link": "#00016B"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Open Sans",
+      "heading": "Poppins"
+    },
+    "fontStacks": {
+      "body": [
+        "Open Sans"
+      ],
+      "heading": [
+        "Poppins"
+      ],
+      "paragraph": [
+        "Open Sans"
+      ]
+    },
+    "fontSizes": {
+      "h1": "34px",
+      "h2": "32px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "5px"
+  },
+  "components": {},
+  "images": {
+    "logo": "File saved at: attached_assets/logo.png",
+    "favicon": "File saved at: attached_assets/favicon.jpg",
+    "ogImage": "File saved at: attached_assets/ogImage.png"
+  },
+  "__framework_hints": [
+    "All in One SEO (AIOSEO) 4.4.8"
+  ],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Strong indicators: header logo linking to homepage, header location, visible, class contains logo, alt contains brand name \"Richa Foam Agency - Richa Foam Agency\", reasonable size. Score: 107 (clear winner by 57 points)",
+    "confidence": 0.9
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "LLM failed"
+    },
+    "secondary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "LLM failed"
+    },
+    "confidence": 0
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0,
+    "overall": 0
+  }
+}
