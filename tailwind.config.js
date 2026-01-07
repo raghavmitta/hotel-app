@@ -2,7 +2,6 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        // A very slow, subtle float instead of a jerky bounce
         'float-slow': 'float 4s ease-in-out infinite',
       },
       keyframes: {
