@@ -7,18 +7,21 @@ import { ProductsCarousel } from "@/components/products-carousel";
 import { ClientLogos } from "@/components/client-logos";
 import { LeadForm } from "@/components/lead-form";
 import { Footer } from "@/components/footer";
+import { TestimonialSection } from "@/components/testimonial-section";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground overflow-x-hidden selection:bg-accent/30">
-      <Navbar />
+    <Navbar />
       <main>
         <Hero />
         <Features />
         <PromoForm />
         <ProductShowcase />
         <ProductsCarousel />
-        <ClientLogos />
+        <TestimonialSection />
+
+
         <section id="about" className="py-24 bg-white text-center">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-serif font-bold text-primary mb-6">About Richa Foam</h2>
