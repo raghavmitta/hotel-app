@@ -80,7 +80,7 @@ export function TestimonialSection() {
                 Established
               </p>
               <p className="text-4xl font-black text-amber-900 leading-[0.85] my-1 tracking-tighter">
-                1984
+                1985
               </p>
               <div className="h-[1px] w-12 bg-gradient-to-r from-transparent via-amber-400 to-transparent mb-1" />
               <p className="text-[8px] font-extrabold text-amber-800 uppercase tracking-wider leading-tight max-w-[80px]">
@@ -152,7 +152,7 @@ export function TestimonialSection() {
 
         {/* Quality Promise Note with Reduced Spacing */}
         <div className="mt-12 p-6 bg-primary text-primary-foreground rounded-2xl shadow-xl relative overflow-hidden text-center">
-          <h3 className="text-xl font-bold mb-2 italic">"40 Years of Perfecting Sleep"</h3>
+          <h3 className="text-xl font-bold mb-2 italic">"40+ Years of Perfecting Sleep"</h3>
           <p className="opacity-90 text-sm max-w-2xl mx-auto leading-relaxed">
             We've worked with experts across industries to refine the science of orthopaedic support. Built on four decades of proven reliability.
           </p>
