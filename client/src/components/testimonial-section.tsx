@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import thumb1 from "@assets/generated_images/a.jpeg";
+import thumb2 from "@assets/generated_images/d.jpeg";
+import thumb3 from "@assets/generated_images/c.jpeg";
+import architect_thumb from "@assets/generated_images/architect.png";
+import thumb5 from "@assets/generated_images/e.jpeg";
+import thumb6 from "@assets/generated_images/f.jpeg";
 import { Play, Stethoscope, Dumbbell, Users, PenTool, Mic2, Hotel } from "lucide-react";
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
+
 
 export function TestimonialSection() {
   const testimonials = [
@@ -16,7 +23,9 @@ export function TestimonialSection() {
       quote: "I recommend Dr. Back for its superior lumbar support and spinal alignment.",
       category: "The Science",
       // ID extracted from your embed code: DPQv0TJCcIl
-      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/" 
+      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/",
+      image: thumb1
+
     },
     {
       role: "Fitness Perspective",
@@ -24,7 +33,9 @@ export function TestimonialSection() {
       icon: <Dumbbell className="w-5 h-5 text-primary" />,
       quote: "Deep sleep is the ultimate recovery tool. This is my go-to mattress for athletes.",
       category: "Performance",
-      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/"
+      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/",
+      image: thumb2
+
     },
     {
       role: "Comfort & Wellness",
@@ -32,7 +43,9 @@ export function TestimonialSection() {
       icon: <Users className="w-5 h-5 text-primary" />,
       quote: "After years of back pain, I finally wake up feeling refreshed and mobile.",
       category: "Lifestyle",
-      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/"
+      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/",
+      image: thumb3
+
     },
     {
       role: "Design Expert",
@@ -40,7 +53,8 @@ export function TestimonialSection() {
       icon: <PenTool className="w-5 h-5 text-primary" />,
       quote: "The material density and construction quality are top-tier for modern homes.",
       category: "Engineering",
-      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/"
+      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/",
+      image: architect_thumb
     },
     {
       role: "Energy Coach",
@@ -48,7 +62,8 @@ export function TestimonialSection() {
       icon: <Mic2 className="w-5 h-5 text-primary" />,
       quote: "My energy on stage starts with a solid night of rest on Richa Foam.",
       category: "Mindset",
-      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/"
+      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/",
+      image: thumb5
     },
     {
       role: "Hospitality Choice",
@@ -56,7 +71,8 @@ export function TestimonialSection() {
       icon: <Hotel className="w-5 h-5 text-primary" />,
       quote: "Our guests always ask about our mattresses. The durability is unmatched.",
       category: "Quality",
-      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/"
+      videoUrl: "https://www.instagram.com/reel/DPQv0TJCcIl/embed/",
+      image: thumb6
     }
   ];
 
@@ -112,6 +128,10 @@ export function TestimonialSection() {
                 >
                   {/* Thumbnail with Play Icon Scale Effect */}
                   <div className="relative aspect-video bg-slate-200 flex items-center justify-center overflow-hidden">
+                    <img 
+                    src={item.image} 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
                     <div className="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/20 transition-colors" />
                     <div className="z-20 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
                       <Play className="fill-current ml-1" size={20} />
@@ -134,18 +154,20 @@ export function TestimonialSection() {
                 </motion.div>
               </DialogTrigger>
               
-              <DialogContent className="sm:max-w-[400px] p-0 bg-black/95 border-none overflow-hidden rounded-2xl ring-0 focus:ring-0">
-                <div className="relative w-full aspect-[9/16]">
-                  <iframe
-                    src={item.videoUrl}
-                    className="absolute inset-0 w-full h-full"
-                    frameBorder="0"
-                    scrolling="no"
-                    allowTransparency={true}
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  ></iframe>
-                </div>
-              </DialogContent>
+              <DialogContent className="sm:max-w-[400px] p-0 bg-black/95 border-none overflow-hidden rounded-2xl ring-0">
+  <div className="relative w-full aspect-[9/16]">
+    <iframe
+      src={item.videoUrl}
+      className="absolute inset-0 w-full h-full"
+      frameBorder="0"
+      scrolling="no"
+      // Change 'allowTransparency' to 'allowtransparency' (lowercase)
+      // or remove it entirely as it's often unnecessary now.
+      allowtransparency="true" 
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+    ></iframe>
+  </div>
+</DialogContent>
             </Dialog>
           ))}
         </div>
