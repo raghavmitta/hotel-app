@@ -13,11 +13,18 @@ import { useLocation } from "wouter";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
-  hotelName: z.string().min(2, "Hotel name is required"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number is required"),
-  quantity: z.string().min(1, "Please select a quantity"),
-  message: z.string().optional(),
+   hotelName: z.string().min(2, "Hotel name is required"),
+   // UPDATED: Validates that the number is 1 or more
+   quantity: z
+     .string()
+     .min(1, "Quantity is required")
+     .refine((val) => parseInt(val) >= 1, {
+       message: "Quantity must be at least 1",
+     }),
+   email: z.string().email("Invalid email address").optional().or(z.literal("")),
+   phone: z.string().regex(/^[6-9]\d{9}$/, "Please enter a valid 10-digit mobile number"),
+   location: z.string().min(2, "City is required"),
+   message: z.string().optional()
 });
 
 export function PromoForm() {
@@ -31,30 +38,49 @@ export function PromoForm() {
       phone: "",
       quantity: "",
       message: "",
+      location: ""
     },
   });
 
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxv62qFn2ok69pE6Tv5_lQmXKCwUPtbhoJuVCgPkSoLCEfHVIdGogP-FC6QlzBvHGb5fw/exec";
+  
+  // ... inside LeadForm component
+  
   const submitLead = useMutation({
     mutationFn: async (values: z.infer<typeof formSchema>) => {
-      const response = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...values,
-          source: "promo_form",
+      // We wrap both fetch requests in Promise.all so they run at the same time
+      const [phpResponse, googleResponse] = await Promise.all([
+        // Path 1: Your existing PHP DB
+        fetch("api/lead.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...values, source: "first_form" }),
         }),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to submit lead");
+        
+        // Path 2: Google Sheet
+        fetch(GOOGLE_SHEET_URL, {
+          method: "POST",
+          mode: "no-cors", // Google Apps Script requires no-cors for simple web apps
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            ...values,
+            source: "first_form",
+          }),
+        })
+      ]);
+  
+      if (!phpResponse.ok) {
+        throw new Error("Failed to submit to database");
       }
-      return response.json();
+  
+      return phpResponse.json();
     },
     onSuccess: () => {
       form.reset();
       setLocation("/thank-you");
     },
     onError: (error) => {
-      console.error("Form submission error:", error);
+      console.error("Lead capture failed:", error);
     },
   });
 
@@ -151,7 +177,7 @@ export function PromoForm() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-xs font-semibold">Email</FormLabel>
+                        <FormLabel className="text-xs font-semibold">Email (Optional)</FormLabel>
                         <FormControl>
                           <Input placeholder="john@hotel.com" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="input-promo-email" />
                         </FormControl>
@@ -160,62 +186,90 @@ export function PromoForm() {
                     )}
                   />
                   <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-xs font-semibold">Phone</FormLabel>
-                        <FormControl>
-                          <Input placeholder="+91 98765 43210" {...field} className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="input-promo-phone" />
-                        </FormControl>
-                        <FormMessage className="text-xs" />
-                      </FormItem>
-                    )}
-                  />
+  control={form.control}
+  name="phone"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Phone Number</FormLabel>
+      <FormControl>
+        <div className="relative flex items-center">
+          {/* NON-ERASABLE PREFIX */}
+          <span className="absolute left-3 text-gray-500 font-bold border-r pr-2 border-gray-300 pointer-events-none">
+            +91
+          </span>
+          <Input 
+            {...field}
+            type="tel"
+            maxLength={10}
+            placeholder="7500210132" 
+            className="pl-14 bg-gray-50 border-gray-200 focus:bg-white transition-colors" 
+            onChange={(e) => {
+              // Only allow numbers to be typed
+              const val = e.target.value.replace(/\D/g, "");
+              field.onChange(val);
+            }}
+          />
+        </div>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
                 </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <FormField 
+  control={form.control} 
+  name="quantity" 
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel className="text-[10px] uppercase font-black text-slate-400">
+        Units Required
+      </FormLabel>
+      <FormControl>
+        <Input 
+          type="number" 
+          min="1" // Prevents arrows from going below 1
+          placeholder="25" 
+          {...field} 
+          className="h-12 rounded-xl bg-slate-50 border-slate-200" 
+          onChange={(e) => {
+            // Prevent manual typing of negative numbers or 0
+            const val = e.target.value;
+            if (val === "" || parseInt(val) >= 1) {
+              field.onChange(val);
+            }
+          }}
+        />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )} 
+/>
 
-                <FormField
-                  control={form.control}
-                  name="quantity"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-xs font-semibold">Estimated Quantity</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="bg-gray-50 border-gray-200 focus:bg-white transition-colors text-sm" data-testid="select-promo-quantity">
-                            <SelectValue placeholder="Select quantity range" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="10-50">10 - 50 units</SelectItem>
-                          <SelectItem value="51-100">51 - 100 units</SelectItem>
-                          <SelectItem value="101-500">101 - 500 units</SelectItem>
-                          <SelectItem value="500+">500+ units</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage className="text-xs" />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-xs font-semibold">Special Requirements (Optional)</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Project timeline, custom sizes, delivery date..." 
-                          className="resize-none bg-gray-50 border-gray-200 focus:bg-white transition-colors min-h-[80px] text-sm" 
-                          {...field} 
-                          data-testid="textarea-promo-message"
-                        />
-                      </FormControl>
-                      <FormMessage className="text-xs" />
-                    </FormItem>
-                  )}
-                />
+                <FormField control={form.control} name="location" render={({ field }) => (
+                            <FormItem><FormLabel className="text-[10px] uppercase font-black text-slate-400">Property City</FormLabel>
+                            <FormControl><Input placeholder="Agra" {...field} className="h-12 rounded-xl bg-slate-50 border-slate-200" /></FormControl>
+                            <FormMessage /></FormItem>
+                          )} />
+                </div>
+                          <FormField
+                                            control={form.control}
+                                            name="message"
+                                            render={({ field }) => (
+                                              <FormItem>
+                                                <FormLabel>Additional Requirements (Optional)</FormLabel>
+                                                <FormControl>
+                                                  <Textarea 
+                                                    placeholder="Specific sizes, delivery timeline, custom requirements..." 
+                                                    className="resize-none bg-gray-50 border-gray-200 focus:bg-white transition-colors min-h-[100px]" 
+                                                    {...field}
+                                                    data-testid="textarea-lead-message" 
+                                                  />
+                                                </FormControl>
+                                                <FormMessage />
+                                              </FormItem>
+                                            )}
+                                          />
 
                 <Button 
                   type="submit" 
