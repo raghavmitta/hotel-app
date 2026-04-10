@@ -5,8 +5,10 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { metaImagesPlugin } from "./vite-plugin-meta-images";
 
+
+
 export default defineConfig({
-  base: "/hospitality-mattresses/",
+  base: '/hospitality-mattresses/',
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -47,6 +49,16 @@ export default defineConfig({
     fs: {
       strict: true,
       deny: ["**/.*"],
+    },
+    // Rewrite all requests under /hospitality-mattresses/ to index.html
+    // so client-side routing works locally at localhost:5000/hospitality-mattresses/
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /^\/hospitality-mattresses\/.*$/,
+          to: '/hospitality-mattresses/index.html',
+        },
+      ],
     },
   },
 });
