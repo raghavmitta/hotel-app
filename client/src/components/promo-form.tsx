@@ -35,7 +35,7 @@ export function PromoForm() {
       name: "",
       hotelName: "",
       email: "",
-      phone: "+91",
+      phone: "",
       quantity: "",
       message: "",
       location: ""

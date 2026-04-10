@@ -34,7 +34,7 @@ export function LeadForm() {
       name: "",
       hotelName: "",
       email: "",
-      phone: "+91 ",
+      phone: "",
       quantity: "",
       message: "",
       location: ""
@@ -83,29 +83,6 @@ const submitLead = useMutation({
     console.error("Lead capture failed:", error);
   },
 });
- /* const submitLead = useMutation({
-    mutationFn: async (values: z.infer<typeof formSchema>) => {
-      const response = await fetch("api/lead.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...values,
-          source: "contact_form",
-        }),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to submit lead");
-      }
-      return response.json();
-    },
-    onSuccess: () => {
-      form.reset();
-      setLocation("/thank-you");
-    },
-    onError: (error) => {
-      console.error("Form submission error:", error);
-    },
-  });*/
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     submitLead.mutate(values);
